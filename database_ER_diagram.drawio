@@ -1,0 +1,55 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/26.1.1 Chrome/132.0.6834.210 Electron/34.3.3 Safari/537.36" version="26.1.1">
+  <diagram name="ERD" id="ERD-1">
+    <mxGraphModel dx="794" dy="519" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="2" value="users" style="swimlane;fillColor=#D5E8D4;" parent="1" vertex="1">
+          <mxGeometry x="40" y="40" width="180" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="3" value="PK user_id&#xa;username&#xa;account&#xa;secret&#xa;region" style="text" parent="2" vertex="1">
+          <mxGeometry y="40" width="180" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="4" value="business_type" style="swimlane;fillColor=#DAE8FC;" parent="1" vertex="1">
+          <mxGeometry x="300" y="40" width="180" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="5" value="PK type_id&#xa;type_name" style="text" parent="4" vertex="1">
+          <mxGeometry y="40" width="180" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="6" value="order" style="swimlane;fillColor=#FFF2CC;" parent="1" vertex="1">
+          <mxGeometry x="40" y="220" width="180" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="7" value="PK order_id&#xa;FK user_id&#xa;FK type_id&#xa;order_name&#xa;province&#xa;amount" style="text" parent="6" vertex="1">
+          <mxGeometry y="30" width="180" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="8" value="opportunity" style="swimlane;fillColor=#FFF2CC;" parent="1" vertex="1">
+          <mxGeometry x="300" y="220" width="180" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="9" value="PK op_id&#xa;FK user_id&#xa;FK type_id&#xa;bo_name&#xa;province&#xa;amount" style="text" parent="8" vertex="1">
+          <mxGeometry y="30" width="180" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="10" value="monthly_report" style="swimlane;fillColor=#F8CECC;" parent="1" vertex="1">
+          <mxGeometry x="560" y="40" width="200" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="11" value="PK mr_id&#xa;FK order_id&#xa;month&#xa;recv_it&#xa;recv_nt&#xa;act_rev_nt&#xa;refnd_exp&#xa;refnd_act&#xa;pay_est&#xa;pay_act" style="text" parent="10" vertex="1">
+          <mxGeometry y="30" width="200" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="12" style="endArrow=block;strokeColor=#000000;" parent="1" source="6" target="2" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="13" style="endArrow=block;strokeColor=#000000;" parent="1" source="6" target="4" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="14" style="endArrow=block;strokeColor=#000000;" parent="1" source="8" target="2" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="15" style="endArrow=block;strokeColor=#000000;" parent="1" source="8" target="4" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="16" style="endArrow=block;strokeColor=#000000;" parent="1" source="10" target="6" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
